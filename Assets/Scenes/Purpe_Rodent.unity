@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2.25
+  weapon_render: {fileID: 1074715740}
 --- !u!1 &223788483
 GameObject:
   m_ObjectHideFlags: 0
