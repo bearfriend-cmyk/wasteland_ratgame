@@ -22,7 +22,9 @@ public class PlayerMoveScript : MonoBehaviour
     private float max_speed;
     private bool busy = false;
     private bool running = false;
-
+    private bool facingUp = false;
+    private bool facingDown = false;
+    public SpriteRenderer weapon_render;
 
     private float CD_TIME;
 
@@ -115,11 +117,18 @@ public class PlayerMoveScript : MonoBehaviour
     {
 
 
-        if (anim.GetFloat("MoveX") == -1)
+        if (anim.GetFloat("MoveX") < 0)
         { facingLeft = true; }
 
-        if (anim.GetFloat("MoveX") == 1)
+        if (anim.GetFloat("MoveX") > 0)
         { facingLeft = false; }
+
+
+        if (anim.GetFloat("MoveY") < 0)
+        { facingDown = true; facingUp = false; }
+
+        if (anim.GetFloat("MoveY") > 0)
+        { facingDown = false; facingUp = true; }
 
 
 
@@ -142,7 +151,14 @@ public class PlayerMoveScript : MonoBehaviour
     {
         
         Vector3 scale = transform.localScale;
-        if (facingLeft) { scale.x = -3; } else { scale.x = 3; }
+        if (facingLeft) { scale.x = -3; weapon_render.sortingOrder = 0; } else { scale.x = 3; weapon_render.sortingOrder = 1; }
+
+
+        if (facingUp || facingDown)
+        {
+            facingUp = false; facingDown = false;
+            if (rb.velocity == Vector2.zero) { facingLeft = false; scale.x = 3; }
+         }
         transform.localScale = scale;
         //facingLeft = false;
     }
