@@ -18,14 +18,10 @@ public class PlayerPlatformerMove : MonoBehaviour
     private Vector3 moveDir;
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
-    public LayerMask mask;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
     public Transform attackPos;
-    public LayerMask whatIsEnemisEnemies;
-    public float attackRange;
-    public int Melee_damage;
 
     private enum PlayerState
     {
@@ -94,21 +90,14 @@ public class PlayerPlatformerMove : MonoBehaviour
 
     void PlayerAttack()
     {
-        if (timeBtwAttack <= 0)
-        {
-            if (Input.GetKey(KeyCode.F))
-            {
-              
-            }
-            timeBtwAttack = startTimeBtwAttack;
-           } 
-            else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
+       
     }
 
     void PlayerDeath()
+    {
+
+    }
+    void PlayerHP(float damage)
     {
 
     }
