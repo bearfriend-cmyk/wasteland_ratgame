@@ -151,15 +151,19 @@ public class PlayerMoveScript : MonoBehaviour
     {
         
         Vector3 scale = transform.localScale;
-        if (facingLeft) { scale.x = -3; weapon_render.sortingOrder = 0; } else { scale.x = 3; weapon_render.sortingOrder = 1; }
+        if (facingLeft) { scale.x = -3; } else { scale.x = 3; }
 
 
         if (facingUp || facingDown)
         {
+            weapon_render.sortingOrder = 1;
             facingUp = false; facingDown = false;
-            if (rb.velocity == Vector2.zero) { facingLeft = false; scale.x = 3; }
-         }
-        transform.localScale = scale;
+            facingLeft = false; scale.x = 3;
+
+            //if (rb.velocity == Vector2.zero) {}
+        }
+        else { weapon_render.sortingOrder = 0; }
+            transform.localScale = scale;
         //facingLeft = false;
     }
 }
