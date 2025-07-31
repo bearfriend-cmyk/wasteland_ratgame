@@ -2,32 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_script : MonoBehaviour
+public class enemy_Script : MonoBehaviour
 {
-    public GameObject Enemy;
-    public float EnemyHP = 100;
+ 
+
+    public GameObject Bullet;
+    public Transform BulletPos;
+
+    private float timer;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
 
-    }
-    public void takeDamage(int Melee_damage)
-    {
-        EnemyHP -= Melee_damage;
-        Debug.Log("damage taken");
-        if (EnemyHP <= 0)
+        if(timer > 1)
         {
-            Destroy(Enemy);
+
+            timer = 0;
+            shoot();
         }
     }
+    void shoot()
+    {
+        Instantiate(Bullet, BulletPos.position, Quaternion.identity);
+    }
 }
-
-
-
-
