@@ -15,10 +15,8 @@ public class Bullet_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        Vector3 direction = (Player.transform.position - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x, direction.y) * force;
-
-        Debug.Log(direction);
+        Vector3 direction = Player.transform.position - transform.forward;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
     }
 
     // Update is called once per frame

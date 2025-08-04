@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
 
         Collider2D[] Hit_Enemies = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemyLayers);
 
-        Collider2D[] Hit_Projectiles = Physics2D.OverlapCircleAll(attack_Point.position, attack_range * 1.5f, enemy_projectileMask);
+        Collider2D[] Hit_Projectiles = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemy_projectileMask);
 
         //Do Damage here!
 
