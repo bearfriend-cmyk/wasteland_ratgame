@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
-    int currentHealth;
+    public int currentHealth;
+    private GameObject Player;
+    public Scene PlayScene;
+    public TextMeshProUGUI Health_Text;
 
     void Start()
     {
         currentHealth = maxHealth;
+        Player = GameObject.FindGameObjectWithTag("Player");
+
+        Health_Text.text = "Health: " + currentHealth;
+
     }
 
     public void takeDamage(int damage)
@@ -18,6 +26,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
 
         //Optional Animation
+
+        Health_Text.text = "Health: " + currentHealth;
+
+        StartCoroutine(Damage_VFX(Player.GetComponent<SpriteRenderer>()));
+
 
         if (currentHealth <= 0)
         { Die(); }
@@ -29,10 +42,21 @@ public class PlayerHealth : MonoBehaviour
     {
         //Optional Death Animation
 
-        Debug.Log("Enemy Died");
-        Destroy(gameObject);
+        PlayScene = SceneManager.GetActiveScene();
+
+        Debug.Log("Player Died");
+        SceneManager.LoadScene(PlayScene.name);
 
         //Disable Enemy
 
     }
+
+    public IEnumerator Damage_VFX(SpriteRenderer rend)
+    {
+        rend.color = Color.red;
+        yield return new WaitForSeconds(0.08f);
+        rend.color = Color.white;
+
+    }
+
 }

@@ -136,6 +136,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 6
   timer: 0
+  Bullet_Layer:
+    serializedVersion: 2
+    m_Bits: 256
+  Enemy_Layer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!50 &1224239977155716536
 Rigidbody2D:
   serializedVersion: 4
