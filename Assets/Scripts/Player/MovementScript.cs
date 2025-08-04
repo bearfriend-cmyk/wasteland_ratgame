@@ -70,7 +70,7 @@ public class PlayerMoveScript : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) 
         {
 
             running = !running;
