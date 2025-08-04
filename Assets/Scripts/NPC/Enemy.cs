@@ -7,7 +7,7 @@ public class Enemy: MonoBehaviour
 
 
     public int maxHealth = 3;
-    int currentHealth;
+    public int currentHealth;
 
     void Start()
     {
@@ -31,7 +31,6 @@ public class Enemy: MonoBehaviour
     {
         //Optional Death Animation
 
-        Debug.Log("Enemy Died");
         Destroy(gameObject);
 
         //Disable Enemy

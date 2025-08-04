@@ -8,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
     private GameObject Player;
-    public Scene PlayScene;
     public TextMeshProUGUI Health_Text;
 
     void Start()
@@ -42,10 +41,9 @@ public class PlayerHealth : MonoBehaviour
     {
         //Optional Death Animation
 
-        PlayScene = SceneManager.GetActiveScene();
 
         Debug.Log("Player Died");
-        SceneManager.LoadScene(PlayScene.name);
+        SceneManager.LoadScene("Start screen");
 
         //Disable Enemy
 

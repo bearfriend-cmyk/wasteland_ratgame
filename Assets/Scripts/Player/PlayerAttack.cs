@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayers;
     public LayerMask enemy_projectileMask;
     public int attack_Damage = 1;
+    public TextMeshProUGUI scoreGUI;
+    public int score = 0;
     void Update()
     {
 
@@ -30,7 +34,9 @@ public class PlayerAttack : MonoBehaviour
 
         Collider2D[] Hit_Enemies = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemyLayers);
 
-        Collider2D[] Hit_Projectiles = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemy_projectileMask);
+        Collider2D[] Hit_Projectiles = Physics2D.OverlapCircleAll(attack_Point.position, attack_range * 1.85f, enemy_projectileMask);
+
+        
 
         //Do Damage here!
 
@@ -42,7 +48,17 @@ public class PlayerAttack : MonoBehaviour
 
 
             StartCoroutine(Damage_VFX(enemy.GetComponent<SpriteRenderer>()));
-            enemy.GetComponent<Enemy>().takeDamage(attack_Damage); 
+
+            if (enemy.GetComponent<Enemy>().currentHealth == 1)
+            {
+                score += 1;
+                scoreGUI.text = "Score: " + score;
+            }
+
+            enemy.GetComponent<Enemy>().takeDamage(attack_Damage);
+
+           
+
         
         }
     }
@@ -51,6 +67,7 @@ public class PlayerAttack : MonoBehaviour
 
     
 
+   
 
     void OnDrawGizmosSelected()
 
