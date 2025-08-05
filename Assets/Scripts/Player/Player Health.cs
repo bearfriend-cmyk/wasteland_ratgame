@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 10;
     public int currentHealth;
     private GameObject Player;
     public TextMeshProUGUI Health_Text;
