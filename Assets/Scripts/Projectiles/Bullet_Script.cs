@@ -23,12 +23,7 @@ public class Bullet_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
 
-        if(timer > 2)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
