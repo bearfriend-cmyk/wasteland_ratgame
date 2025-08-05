@@ -41,12 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5037953543216205394}
   - component: {fileID: 7870614867035034307}
-  - component: {fileID: 7472789977486232670}
   - component: {fileID: 7276070822334612362}
   - component: {fileID: 7260264140857746871}
   - component: {fileID: 9041338931655869577}
   - component: {fileID: 1620210270833566753}
-  - component: {fileID: 8411085526311771799}
   - component: {fileID: 4693084456816786397}
   m_Layer: 3
   m_Name: Micheal_0
@@ -126,22 +124,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7472789977486232670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3935642720260090714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e4ed78e5a4d6e45b00a491a726fdbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 458477995095335396, guid: c16246be8b0724144b68e8e294b7655a, type: 3}
-  BulletPos: {fileID: 4774856289303479528}
-  max_bullettime: 0.4
-  min_bullettime: 0.2
 --- !u!114 &7276070822334612362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2459434538916852856, guid: 08fbaeaf57f1081428f80f19b4d65956, type: 3}
   BulletPos: {fileID: 8869202902213112712}
-  max_bullettime: 0.2
-  min_bullettime: 0.1
+  max_bullettime: 0.8
+  min_bullettime: 0.35
 --- !u!114 &7260264140857746871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,22 +226,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8411085526311771799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3935642720260090714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e4ed78e5a4d6e45b00a491a726fdbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 458477995095335396, guid: c16246be8b0724144b68e8e294b7655a, type: 3}
-  BulletPos: {fileID: 1482142419295942305}
-  max_bullettime: 0.4
-  min_bullettime: 0.2
 --- !u!114 &4693084456816786397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,8 +240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2459434538916852856, guid: 08fbaeaf57f1081428f80f19b4d65956, type: 3}
   BulletPos: {fileID: 1632592838309107492}
-  max_bullettime: 0.2
-  min_bullettime: 0.1
+  max_bullettime: 1.35
+  min_bullettime: 0.8
 --- !u!1 &5568396805207945914
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,10 @@ public class pipespawnscript : MonoBehaviour
 
         if (timer < spawnrate)
         {
-            timer = timer + Time.deltaTime;
+            if (spawned_pipe == null)
+            { timer = timer + Time.deltaTime; }
+            else
+            { timer = 0; }
         }
         else
         {

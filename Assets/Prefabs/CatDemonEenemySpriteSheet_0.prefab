@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2459434538916852856, guid: 08fbaeaf57f1081428f80f19b4d65956, type: 3}
   BulletPos: {fileID: 976661074251080362}
-  max_bullettime: 1
+  max_bullettime: 2.5
   min_bullettime: 0.75
 --- !u!95 &879882706576369236
 Animator:
