@@ -11,6 +11,7 @@ public class enemy_Script : MonoBehaviour
     private GameObject Player;
 
     private float timer;
+    private float max_time = 1;
     private bool isActive = false;
     private float checkRadius = 6;
     private LayerMask playerLayer;
@@ -29,9 +30,10 @@ public class enemy_Script : MonoBehaviour
 
         {
             isActive = false;
+            max_time = Random.Range(0.5f, 2.5f);
         }
 
-        if (timer > 1)
+        if (timer >= max_time)
         {
 
 
