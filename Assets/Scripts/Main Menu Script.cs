@@ -29,7 +29,7 @@ public class MainMenuScript : MonoBehaviour
         controls_Shown = !controls_Shown;
 
         if (controls_Shown)
-        { controls_gui.text = "[WASD - Movement]    [SPACE - Attack]"; }
+        { controls_gui.text = "[WASD/Arrow Keys - Movement]    [SPACE - Attack]"; }
         else
         { controls_gui.text = ""; }
 

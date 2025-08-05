@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
 
         Debug.Log("Player Died");
-        SceneManager.LoadScene("Start screen");
+        SceneManager.LoadScene("Game over screen");
 
         //Disable Enemy
 
