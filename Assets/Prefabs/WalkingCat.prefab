@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3a70474f06d5343b531b56fbd7065c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   currentHealth: 0
 --- !u!114 &798759490887373850
 MonoBehaviour:
@@ -220,3 +220,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 458477995095335396, guid: c16246be8b0724144b68e8e294b7655a, type: 3}
   BulletPos: {fileID: 3371241945168056494}
+  max_bullettime: 0.7
+  min_bullettime: 0.5

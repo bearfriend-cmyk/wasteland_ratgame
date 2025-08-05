@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5306069504214180962}
   - component: {fileID: 8421311516635032524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WalkingCatSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,4 +47,4 @@ MonoBehaviour:
   pipe: {fileID: 8200181869283951171, guid: 7e26af70746448f488ee7dc03f253bf2, type: 3}
   spawnrate: 3
   timer: 0
-  heightoffset: 7.5
+  heightoffset: 4

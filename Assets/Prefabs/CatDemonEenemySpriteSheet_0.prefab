@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2459434538916852856, guid: 08fbaeaf57f1081428f80f19b4d65956, type: 3}
   BulletPos: {fileID: 976661074251080362}
+  max_bullettime: 1
+  min_bullettime: 0.75
 --- !u!95 &879882706576369236
 Animator:
   serializedVersion: 5
@@ -168,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  currentHealth: 0
 --- !u!61 &5922111378948268271
 BoxCollider2D:
   m_ObjectHideFlags: 0

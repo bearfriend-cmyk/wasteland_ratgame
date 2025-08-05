@@ -14,6 +14,8 @@ public class enemy_Script : MonoBehaviour
     private float max_time = 1;
     private bool isActive = false;
     private float checkRadius = 6;
+    public float max_bullettime;
+    public float min_bullettime;
     private LayerMask playerLayer;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class enemy_Script : MonoBehaviour
 
         {
             isActive = false;
-            max_time = Random.Range(0.5f, 2.5f);
+            max_time = Random.Range(min_bullettime, max_bullettime);
         }
 
         if (timer >= max_time)

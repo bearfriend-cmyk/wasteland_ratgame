@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
+    public int Health = 5;
     public int currentHealth;
     private GameObject Player;
     public TextMeshProUGUI Health_Text;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = Health;
         Player = GameObject.FindGameObjectWithTag("Player");
 
         Health_Text.text = "Health: " + currentHealth;
