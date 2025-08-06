@@ -47,4 +47,4 @@ MonoBehaviour:
   pipe: {fileID: 8200181869283951171, guid: 7e26af70746448f488ee7dc03f253bf2, type: 3}
   spawnrate: 3
   timer: 0
-  heightoffset: 4
+  heightoffset: 2
