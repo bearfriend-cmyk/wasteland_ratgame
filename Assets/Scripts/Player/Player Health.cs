@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
-    public int Health = 5;
+    public int Health = 15;
     public int currentHealth;
     private GameObject Player;
     public TextMeshProUGUI Health_Text;
@@ -26,9 +26,12 @@ public class PlayerHealth : MonoBehaviour
 
         //Optional Animation
 
+        if (currentHealth > 50)
+        { currentHealth = 50; }
+
         Health_Text.text = "Health: " + currentHealth;
 
-        StartCoroutine(Damage_VFX(Player.GetComponent<SpriteRenderer>()));
+        StartCoroutine(Damage_VFX(Player.GetComponent<SpriteRenderer>(),damage));
 
 
         if (currentHealth <= 0)
@@ -49,9 +52,11 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    public IEnumerator Damage_VFX(SpriteRenderer rend)
+    public IEnumerator Damage_VFX(SpriteRenderer rend, int damage)
     {
-        rend.color = Color.red;
+        if (damage > 0)
+        { rend.color = Color.red; }
+        else { rend.color = Color.green; }
         yield return new WaitForSeconds(0.08f);
         rend.color = Color.white;
 

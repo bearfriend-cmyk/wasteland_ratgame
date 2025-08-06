@@ -9,6 +9,7 @@ public class Bullet_Script : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public float timer;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,7 @@ public class Bullet_Script : MonoBehaviour
 
         if (collision.gameObject == Player)
         {
-            Player.GetComponent<PlayerHealth>().takeDamage(1);
+            Player.GetComponent<PlayerHealth>().takeDamage(damage);
         }
 
     }

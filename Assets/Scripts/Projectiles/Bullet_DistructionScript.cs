@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet_DistructionScript : MonoBehaviour
 {
     public float timer;
+    public float lifetime;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class Bullet_DistructionScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 2)
+        if (timer > lifetime)
         {
             Destroy(gameObject);
         }
