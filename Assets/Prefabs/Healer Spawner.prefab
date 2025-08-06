@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipe: {fileID: 7217801987991420443, guid: cac4ddf63fd3aa7408ddf236d960fb60, type: 3}
-  spawnrate: 15
+  spawnrate: 17
   timer: 0
   heightoffset: 1

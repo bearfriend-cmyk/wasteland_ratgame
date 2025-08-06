@@ -26,8 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
         //Optional Animation
 
-        if (currentHealth > 50)
-        { currentHealth = 50; }
+        if (currentHealth > 25)
+        { currentHealth = 25; }
 
         Health_Text.text = "Health: " + currentHealth;
 

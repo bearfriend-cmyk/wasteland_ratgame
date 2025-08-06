@@ -237,6 +237,7 @@ MonoBehaviour:
   Health: 8
   currentHealth: 0
   Health_Text: {fileID: 0}
+  MaxOverHeal: 25
 --- !u!1 &5821009896654744133
 GameObject:
   m_ObjectHideFlags: 0

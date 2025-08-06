@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 284045121537375348}
   - component: {fileID: 7544912129133599188}
   - component: {fileID: -6860376263807344929}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: HealingProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,6 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02e5c84a04480d4abaec0ee7cd905ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 50
+  force: 25
   timer: 0
   damage: -4
