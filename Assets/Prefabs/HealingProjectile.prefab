@@ -273,4 +273,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 25
   timer: 0
-  damage: -4
+  damage: -3
